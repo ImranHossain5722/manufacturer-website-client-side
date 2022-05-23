@@ -1,8 +1,21 @@
+import { signOut } from "firebase/auth";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import {useAuthState} from 'react-firebase-hooks/auth'
+import auth from '../../firebase.init'
+
 
 const NavBar = ({ children }) => {
 const [dark, setDark] = useState(false);
+
+
+const [user]= useAuthState(auth) 
+  
+const handelSignOut =()=>{
+  signOut(auth)
+}
+
+
   return (
     <div>
       <div class="drawer drawer-end " data-theme={dark ? "dark" : "light"}>
@@ -29,7 +42,7 @@ const [dark, setDark] = useState(false);
               </label>
             </div>
             <div class="flex-none hidden lg:block">
-              <ul class="menu menu-horizontal gap-x-5">
+              <ul class="menu menu-horizontal ">
                 {/* <!-- Navbar menu content here --> */}
                 <li>
                   <NavLink to="/" className="rounded-lg">
@@ -41,21 +54,30 @@ const [dark, setDark] = useState(false);
                     My Portfolio
                   </NavLink>
                 </li>
+                
                 <li>
-                  <NavLink to="/dashboard" className="rounded-lg">
-                    Dashboard
-                  </NavLink>
+                  {
+                     user && <NavLink to="/dashboard" className="rounded-lg"> 
+                     Dashboard
+                   </NavLink>
+
+                  }
                 </li>
+              
                 <li>
-                  <NavLink to="/bolgs" className="rounded-lg">
+                  <NavLink to="/blogs" className="rounded-lg">
                     Blogs
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/login" className="rounded-lg">
+                  {
+                    user?<button className='btn btn-ghost' onClick={handelSignOut}>Sign Out</button>:<NavLink to="/login" className="rounded-lg">
                     Login
                   </NavLink>
+                  }
+                  
                 </li>
+
                 <li>
                   <NavLink to="/signup" className="rounded-lg">
                     Sign Up

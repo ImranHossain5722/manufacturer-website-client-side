@@ -2,7 +2,7 @@ import React from 'react';
 
 const Loading = () => {
     return (
-        <div>
+        <div className=' flex justify-center items-center h-screen'>
             <button class="btn btn-square loading"></button>
         </div>
     );

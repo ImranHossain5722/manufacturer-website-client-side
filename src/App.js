@@ -9,6 +9,7 @@ import SignUp from '../src/pages/Register/SignUp';
 import NotFound from '../src/Shared/NotFound/NotFound';
 import Footer from './Shared/Footer/Footer';
 import Blogs from './pages/Blogs/Blogs';
+import RequireAuth from './Shared/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>} > </Route>
           <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>} > </Route>
-          <Route path='/dashboard' element={<Dashboard></Dashboard>} > </Route>
+          <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>} > 
+          
+          
+          
+          </Route>
           <Route path='/blogs' element={<Blogs></Blogs>} > </Route>
           <Route path='/login' element={<Login></Login>} > </Route>
           <Route path='/signup' element={<SignUp></SignUp>} > </Route>

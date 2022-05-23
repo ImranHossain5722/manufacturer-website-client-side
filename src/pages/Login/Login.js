@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Banner from "../../Assets/images/home-banner.jpeg";
 import auth from "../../firebase.init";
 
@@ -16,7 +16,10 @@ const Login = () => {
     useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-
+    const navigate = useNavigate();
+    const location = useLocation();
+    let errorElement ;
+    let from =location.state?.from?.pathname || "/"
   const {
     register,
     handleSubmit,
@@ -40,6 +43,10 @@ const Login = () => {
           <p className="text-red-500">{error?.message || googleError?.message}</p>
         );
       }
+
+      if(user){
+        navigate(from,{replace:true});
+    }
 
   return (
     <div
@@ -66,7 +73,7 @@ const Login = () => {
                     <input
                       type="email"
                       placeholder="Your Email"
-                      className="input input-bordered w-full max-w-xs"
+                      className="input input-bordered w-full max-w-xs text-black"
                       {...register("email", {
                         required: {
                           value: true,
@@ -100,7 +107,7 @@ const Login = () => {
                     <input
                       type="password"
                       placeholder="Your Password"
-                      className="input input-bordered w-full max-w-xs"
+                      className="input input-bordered w-full max-w-xs text-black"
                       {...register("password", {
                         required: {
                           value: true,
