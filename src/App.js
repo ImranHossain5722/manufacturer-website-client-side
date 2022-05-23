@@ -1,13 +1,14 @@
-
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './Shared/Header/NavBar';
-import Home from '../src/pages/Home/Home'
-import MyPortfolio from '../src/pages/MyPortfolio/MyPortfolio'
-import Dashboard from '../src/pages/Dashboard/Dashboard'
-import Login from '../src/pages/Login/Login'
+import Home from '../src/pages/Home/Home';
+import MyPortfolio from '../src/pages/MyPortfolio/MyPortfolio';
+import Dashboard from '../src/pages/Dashboard/Dashboard';
+import Login from '../src/pages/Login/Login';
 import SignUp from '../src/pages/Register/SignUp';
 import NotFound from '../src/Shared/NotFound/NotFound';
+import Footer from './Shared/Footer/Footer';
+import Blogs from './pages/Blogs/Blogs';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Home></Home>} > </Route>
           <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>} > </Route>
           <Route path='/dashboard' element={<Dashboard></Dashboard>} > </Route>
+          <Route path='/blogs' element={<Blogs></Blogs>} > </Route>
           <Route path='/login' element={<Login></Login>} > </Route>
           <Route path='/signup' element={<SignUp></SignUp>} > </Route>
          
@@ -24,6 +26,7 @@ function App() {
 
 
         </Routes>
+        <Footer/>
         </NavBar>
         
     </div>

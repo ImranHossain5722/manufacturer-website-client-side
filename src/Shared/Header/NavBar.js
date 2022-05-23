@@ -1,15 +1,16 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const NavBar = ({ children }) => {
+const [dark, setDark] = useState(false);
   return (
     <div>
-      <div class="drawer drawer-end">
+      <div class="drawer drawer-end " data-theme={dark ? "dark" : "light"}>
         <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content flex flex-col">
           {/* <!-- Navbar --> */}
-          <div class="w-full navbar bg-base-100 px-20 ">
-            <div class="flex-1 px-2 mx-2">Leather</div>
+          <div class="w-full navbar bg-base-200 px-20 ">
+            <div class="flex-1 px-2 mx-2 text-4xl text-blue-400 uppercase font-bold">Leather</div>
             <div class="flex-none lg:hidden">
               <label for="my-drawer-3" class="btn btn-square btn-ghost">
                 <svg
@@ -46,6 +47,11 @@ const NavBar = ({ children }) => {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink to="/bolgs" className="rounded-lg">
+                    Blogs
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink to="/login" className="rounded-lg">
                     Login
                   </NavLink>
@@ -57,7 +63,7 @@ const NavBar = ({ children }) => {
                 </li>
                 <label class="swap swap-rotate ">
                   {/* <!-- this hidden checkbox controls the state --> */}
-                  <input data-toggle-theme="dark,light" type="checkbox" />
+                  <input type="checkbox"   onClick={() => setDark(!dark)}/>
 
                   {/* <!-- sun icon --> */}
                   <svg
@@ -88,10 +94,29 @@ const NavBar = ({ children }) => {
           <ul class="menu p-4 overflow-y-auto w-80 bg-base-100">
             {/* <!-- Sidebar content here --> */}
             <li>
-              <a>Sidebar Item 1</a>
+              <NavLink to="/" className="rounded-lg">
+                Home
+              </NavLink>
             </li>
             <li>
-              <a>Sidebar Item 2</a>
+              <NavLink to="/portfolio" className="rounded-lg">
+                My Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/dashboard" className="rounded-lg">
+                Dashboard
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/login" className="rounded-lg">
+                Login
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/signup" className="rounded-lg">
+                Sign Up
+              </NavLink>
             </li>
           </ul>
         </div>

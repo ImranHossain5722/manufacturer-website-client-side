@@ -1,0 +1,78 @@
+[
+    {
+      
+      "name": "Leather Prototype Development",
+      "price": 99,
+      "quantity":200,
+      "minimum-order ":50,
+      "available-quantity":500,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur.",
+      "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653235108/p-6_oezywv.jpg"
+      
+      
+    },
+
+    {
+      
+      "name": "Contract Cutting and Sewing",
+      "price": 89,
+      "quantity":200,
+      "minimum-order ":50,
+      "available-quantity":500,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident consequatur  Perferendis blanditiis.",
+      "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653235108/product-2_ttxka9.jpg"
+      
+      
+    },
+    {
+      
+      "name": "Leather Belt Manufacturing",
+      "price": 79,
+      "quantity":100,
+      "minimum-order ":50,
+      "available-quantity":500,
+      "description": "Lorem ipsum dolor,  Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+      "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653235108/p-3_bqqzrt.jpg"
+      
+      
+    },
+    
+    {
+      
+      "name": "Custom Case Manufacturing",
+      "price": 79,
+      "quantity":150,
+      "minimum-order" :50,
+      "available-quantity":500,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+      "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653235108/p-4_loe9ci.jpg"
+      
+      
+    },
+    {
+      
+      "name": "Corporate Gifts and Accessories",
+      "price": 99,
+      "quantity":80,
+      "minimum-order ":50,
+      "available-quantity":500,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+      "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653235108/p-5_emrk4v.jpg"
+      
+      
+    },
+
+    {
+      
+      "name": "Private Label Production",
+      "price": 99,
+      "quantity":60,
+      "minimum-order ":50,
+      "available-quantity":500,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing e Itaque provident totam unde consequatur  Perferendis blanditiis a velit.",
+      "img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653235108/p-6_oezywv.jpg"
+      
+      
+    }
+    
+  ]
