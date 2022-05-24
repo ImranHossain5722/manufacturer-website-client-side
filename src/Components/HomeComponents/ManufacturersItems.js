@@ -15,7 +15,7 @@ const ManufacturersItems = () => {
         
         <div>
 
-            <h1 className='text-4xl text-center font-bold'> Our Manufacturers Products </h1>
+            <h1 className='text-4xl text-center font-bold mt-11'> Our Manufacturers Products </h1>
             <div class="divider w-10 h-1 mx-auto bg-primary"></div> 
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 p-12' >

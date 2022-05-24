@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
+import React from 'react';
 import { useQuery } from "react-query";
-import auth from "../../../firebase.init";
+import UserRow from "../../../Components/UserRow/UserRow";
 import Loading from "../../../Shared/Loading/Loading";
 
 const AllUser = () => {
-  const [users, setUsers] = useState([]);
+  const {data:users, isLoading, refetch} = useQuery('users', ()=> fetch('http://localhost:5000/user' , {
+    method:'GET', 
+    headers:{
+     authorization:`Bearer ${localStorage.getItem('accessToken')}`}
+    
+    }).then(res=>res.json()));
+if(isLoading){
 
-  useEffect(() => {
-    fetch("http://localhost:5000/user")
-      .then((res) => res.json())
-      .then((data) => setUsers(data));
-  }, []);
+    return <Loading/>
+}
 
   return (
     <div>
-      <h2> users: {users.length}</h2>
+      <h2>All users:{users.length}</h2>
 
       <div class="overflow-x-auto">
         <table class="table w-full">
@@ -23,13 +25,14 @@ const AllUser = () => {
           <thead>
             <tr>
               <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th>User Email</th>
+              <th>User Role</th>
             </tr>
           </thead>
           <tbody>
-                      
+               {
+                 users.map(  user => <UserRow key={user._id} user={user} refetch={refetch} > </UserRow> )
+               }       
           </tbody>
         </table>
       </div>

@@ -16,6 +16,8 @@ import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AllUser from './pages/Dashboard/AllUser/AllUser';
+import SingleItem from './Components/SingleManufaItem/SingleItem';
+import ManufacturersItems from './Components/HomeComponents/ManufacturersItems';
 
 function App() {
   return (
@@ -36,12 +38,14 @@ function App() {
           <Route path='/blogs' element={<Blogs></Blogs>} > </Route>
           <Route path='/login' element={<Login></Login>} > </Route>
           <Route path='/signup' element={<SignUp></SignUp>} > </Route>
+          <Route path='/manufacturersItems' element={<RequireAuth><ManufacturersItems></ManufacturersItems></RequireAuth>} ></Route>
+          <Route path='/manufacturersItems/:id' element={<RequireAuth><SingleItem></SingleItem></RequireAuth>} ></Route>
          
           <Route path='*' element={<NotFound></NotFound>} > </Route>
 
 
         </Routes>
-        <Footer/>
+        <Footer></Footer>
         <ToastContainer/>
         </NavBar>
         

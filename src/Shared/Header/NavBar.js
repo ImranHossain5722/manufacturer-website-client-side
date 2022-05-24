@@ -55,6 +55,11 @@ const NavBar = ({ children }) => {
                     My Portfolio
                   </NavLink>
                 </li>
+                <li>
+              <NavLink to="/ManufacturersItems" className="rounded-lg">
+                All Products
+              </NavLink>
+            </li>
 
                 <li>
                   {user && (
@@ -141,6 +146,11 @@ const NavBar = ({ children }) => {
             <li>
               <NavLink to="/portfolio" className="rounded-lg">
                 My Portfolio
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/ManufacturersItems" className="rounded-lg">
+                All Products
               </NavLink>
             </li>
             <li>
