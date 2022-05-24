@@ -33,21 +33,6 @@ const SignUp = () => {
     await updateProfile({ displayName: data.name });
   
     // navigate("/appointment")
-
-  //   // send data server
-  //  fetch('http://localhost:5000/user',{
-
-  //   method: 'POST',
-  //   headers:{
-  //     'content-type' : 'application/json'
-  //   },
-  //   body:JSON.stringify(data)
-  // })
-  // .then(res=>res.json())
-  // .then(data=> {
-  //   toast.success('Successfully Sign Up ')
-  
-  // })
   };
 
   
@@ -64,7 +49,7 @@ const SignUp = () => {
     );
   }
 
-  if (user || googleUser) {
+  if (token) {
     
     navigate ('/')
   }

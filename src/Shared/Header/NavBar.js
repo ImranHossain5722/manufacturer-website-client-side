@@ -11,6 +11,7 @@ const NavBar = ({ children }) => {
 
   const handelSignOut = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken'); 
   };
 
   return (

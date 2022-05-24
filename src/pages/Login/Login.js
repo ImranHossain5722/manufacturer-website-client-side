@@ -9,6 +9,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import Loading from "../../Shared/Loading/Loading";
+import useToken from "../../Hooks/UserToken";
 
 const Login = () => {
 
@@ -26,7 +27,7 @@ const Login = () => {
     watch,
     formState: { errors },
   } = useForm();
-
+  const [token] =useToken(user|| googleUser)
     const onSubmit = (data) => {
 
         signInWithEmailAndPassword(data.email, data.password);
@@ -45,7 +46,7 @@ const Login = () => {
         );
       }
 
-      if(user){
+      if(token){
         navigate(from,{replace:true});
     }
 
