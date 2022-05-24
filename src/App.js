@@ -13,6 +13,9 @@ import RequireAuth from './Shared/RequireAuth/RequireAuth';
 import AddReview from './pages/Dashboard/AddReview/AddReview';
 import MyProfile from './pages/Dashboard/MyProfile/MyProfile';
 import MyOrders from './pages/Dashboard/MyOrders/MyOrders';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import AllUser from './pages/Dashboard/AllUser/AllUser';
 
 function App() {
   return (
@@ -27,6 +30,7 @@ function App() {
 
           <Route path='myorders' element={<MyOrders></MyOrders>}></Route>
           <Route path='addreview' element={<AddReview></AddReview>}></Route>
+          <Route path='users' element={<AllUser></AllUser>}></Route>
           
           </Route>
           <Route path='/blogs' element={<Blogs></Blogs>} > </Route>
@@ -38,6 +42,7 @@ function App() {
 
         </Routes>
         <Footer/>
+        <ToastContainer/>
         </NavBar>
         
     </div>

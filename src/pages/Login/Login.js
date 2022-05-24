@@ -30,6 +30,7 @@ const Login = () => {
     const onSubmit = (data) => {
 
         signInWithEmailAndPassword(data.email, data.password);
+
       };
 
       if (loading || googleLoading) {

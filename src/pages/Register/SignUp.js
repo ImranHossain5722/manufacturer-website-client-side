@@ -10,6 +10,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { updateEmail } from "firebase/auth";
 import Loading from '../../Shared/Loading/Loading';
 import auth from '../../firebase.init';
+import {toast } from 'react-toastify';
+import useToken from '../../Hooks/UserToken';
 
 const SignUp = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -25,13 +27,30 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  
+  const [token] = useToken(user || googleUser )
   const onSubmit = async (data) => {
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    // navigate("/appointment");
+  
+    // navigate("/appointment")
+
+  //   // send data server
+  //  fetch('http://localhost:5000/user',{
+
+  //   method: 'POST',
+  //   headers:{
+  //     'content-type' : 'application/json'
+  //   },
+  //   body:JSON.stringify(data)
+  // })
+  // .then(res=>res.json())
+  // .then(data=> {
+  //   toast.success('Successfully Sign Up ')
+  
+  // })
   };
 
+  
   if (loading || googleLoading || updating) {
     return <Loading />;
   }
@@ -49,6 +68,7 @@ const SignUp = () => {
     
     navigate ('/')
   }
+   
 
     return (
         <div
