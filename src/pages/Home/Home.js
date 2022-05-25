@@ -5,6 +5,7 @@ import TopBanner from '../../Components/HomeComponents/TopBanner';
 import OurStep from '../../Components/HomeComponents/OurStep'
 import BusinessSummery from '../../Components/HomeComponents/BusinessSummery';
 import Blogs from '../Blogs/Blogs';
+import Reviews from '../../Components/ReviewComponents/Reviews';
 const Home = () => {
 
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <ManufacturersItems></ManufacturersItems>
             <OurCapability></OurCapability>
             <BusinessSummery></BusinessSummery>
+            <Reviews></Reviews>
             <OurStep></OurStep>
             <Blogs></Blogs>
         </div>

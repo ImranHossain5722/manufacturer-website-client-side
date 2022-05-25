@@ -19,7 +19,7 @@ const Blog = ({blogItems}) => {
           <h5 class=" font-semibold text-primary text-sm">{title}</h5>
           <p>Author: {admin}</p>
           <p>{blog.length<400?blog.length:blog.slice(0,300)}</p>
-          <button class="btn btn-link">Red More</button>
+          <button onClick={()=>navigate(`/blogs/${_id}`)} class="btn btn-link">Red More</button>
           <div class="card-actions justify-end">
             
           </div>

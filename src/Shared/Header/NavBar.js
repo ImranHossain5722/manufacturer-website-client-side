@@ -39,7 +39,10 @@ const NavBar = ({ children }) => {
               </label>
             </div>
             <div class="flex-1 px-2 mx-2 text-4xl text-blue-400 uppercase font-bold">
-              Leather
+            <NavLink to="/" className="rounded-lg">
+             Leather
+              </NavLink>
+              
             </div>
             
             <div class="flex-none hidden lg:block">
@@ -55,11 +58,7 @@ const NavBar = ({ children }) => {
                     My Portfolio
                   </NavLink>
                 </li>
-                <li>
-              <NavLink to="/ManufacturersItems" className="rounded-lg">
-                All Products
-              </NavLink>
-            </li>
+              
 
                 <li>
                   {user && (
@@ -146,11 +145,6 @@ const NavBar = ({ children }) => {
             <li>
               <NavLink to="/portfolio" className="rounded-lg">
                 My Portfolio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/ManufacturersItems" className="rounded-lg">
-                All Products
               </NavLink>
             </li>
             <li>

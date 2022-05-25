@@ -6,7 +6,6 @@ const ManufacturerItem = ({ manufacturerItem }) => {
     _id,
     name,
     price,
-    quantity,
     description,
     img,
     minimumOrder,
