@@ -1,0 +1,52 @@
+[
+{
+"title":"How will you improve the performance of a React Application?",
+"blog":"Optimizing application performance is key for developers who are mindful of keeping a user’s experience positive to keep them on an app and engaged.According to research by Akamai, a second delay in load time can cause a 7 percent reduction in conversions, making it imperative for developers to create apps with optimized performance.In React applications, we are guaranteed a very fast UI by default. However, as an application grows, developers may encounter some performance issues.In this guide, we will discuss five important ways to optimize the performance of a React application, including pre-optimization techniques. These include:Keeping component state local where necessaryMemoizing React components to prevent unnecessary re-rendersCode-splitting in React using dynamic import() Windowing or list virtualization in ReactLazy loading images in ReactReact pre-optimization techniquesBefore optimizing a React application, we must understand how React updates its UI and how to measure an app’s performance. This makes it easy to solve any React performance problems.Let’s start by reviewing how the React UI updates.Understanding how React updates its UI When we create a rendered component, React creates a virtual DOM for its element tree in the component. Now, whenever the state of the component changes, React recreates the virtual DOM tree and compares the result with the previous render.It then only updates the changed element in the actual DOM. This process is called diffing.React uses the concept of a virtual DOM to minimize the performance cost of re-rendering a webpage because the actual DOM is expensive to manipulate.This is great because it speeds up the UI render time. However, this concept can also slow down a complex app if it’s not managed very well.What we can deduce here is that a state change in a React component causes a re-render. Likewise, when the state passes down to a child component as a prop, it re-renders the child and so on, which is fine because React must update the UI.The issue comes when the child components are not affected by the state change. In other words, they do not receive any prop from the parent component.React nonetheless re-renders these child components. So, as long as the parent component re-renders, all of its child components re-render regardless of whether a prop passes to them or not; this is the default behavior of React.",
+"admin":"Imran Hossain",
+"img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653427594/eact-performance-optimization-techniques_vlkju9.png"
+},
+
+{
+"title":"What are the different ways to manage a state in a React application?",
+"blog":"JThe Four Kinds of React State to Manage.When we talk about state in our applications, it’s important to be clear about what types of state actually matter.There are four main types of state you need to properly manage in your React apps:1.Local state 2.Global state 3.Server stat 4.URL state  Local (UI) state – Local state is data we manage in one or another component.Local state is most often managed in React using the useState hook.Global (UI) state – Global state is data we manage across multiple components.Server state – Data that comes from an external server that must be integrated with our UI state.URL state – Data that exists on our URLs, including the pathname and query parameters.",
+"admin":"Imran Hossain",
+"img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653427815/how-to-manage-state-react_nr2urz.png"
+},
+
+{
+"title":"How does prototypical inheritance work?",
+"blog":"Everything in Javascript is an object.Even when creating a Class is an Object via an Object Literal or Constructor Function. This is how Javascript does class-based programming as to other traditional Object-Oriented Programming languages where they use the keyword ‘class’ and ‘inheritance’.Javascript’s version of class-based programming and other traditional class-based programming languages work with the same concept but does not work exactly similar. There are differences in its keyword, syntax, and how it works. There are also debates regarding pros and cons of Javascript’s version of class-based programming, but for simplicity’s sake and learning purposes.So, the core idea of Prototypal Inheritance is that an object can point to another object and inherit all its properties. The main purpose is to allow multiple instances of an object to share common properties, hence, the Singleton Pattern.Below is a sample code with comments and caption to better see how it works:After going through the code, its best to read further about Prototypal Inheritance from mozilla doc. Code example below is just one of many ways of implementing Prototypal Inheritance.",
+"admin":"Imran Hossain",
+"img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653428362/Prototypal-Inheritance_zdypdc.png"
+},
+
+{
+"title":"What is a unit test? Why should write unit tests?",
+
+"blog":"Unit testing ensures that all code meets quality standards before it's deployed. This ensures a reliable engineering environment where quality is paramount. Over the course of the product development life cycle, unit testing saves time and money, and helps developers write better code, more efficiently.Unit testing allows software developers to actually think through the design of the software and what has to be done before they write the code. This can help them to stay focused and can also help them to create much better designs.",
+"admin":"Imran Hossain",
+"img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1651860856/"
+},
+
+{
+"title":"You have an array of products. Each object has a name, price, description, etc. How will you implement a search to find products by name?",
+
+"blog":"We can use search query.URL parameters (known also as “query strings” or “URL query parameters”) are elements inserted in your URLs to help you filter and organize content or track information on your website. In short, URL parameters are a way to pass information about a click using the URL itself.How does a search bar work?the search term or query is entered into the search box and then the search button is clicked. Some applications also allow the user to press the Enter key to initiate the search. The application acquires the text from the search box and matches it with the items in its database and returns the search results.",
+"admin":"Imran Hossain",
+"img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653429158/array_kie8om.jpg"
+},
+
+{
+
+"title":"Why you do not set the state directly in React. For example, if you have `const [products, setProducts] = useState([])`. Why you do not set `products = [...]` instead, you use the `setProducts`",
+
+"blog":"One should never update the state directly because of the following reasons: If you update it directly, calling the setState() afterward may just replace the update you made. When you directly update the state, it does not change this.One should never update the state directly because of the following reasons:If you update it directly, calling the setState() afterward may just replace the update you made.When you directly update the state, it does not change this.state immediately. Instead, it creates a pending state transition, and accessing it after calling this method will only return the present value.You will lose control of the state across all components.",
+
+"admin":"Imran Hossain",
+"img":"https://res.cloudinary.com/dk0lorahh/image/upload/v1653429158/array_kie8om.jpg"
+}
+
+
+
+
+]

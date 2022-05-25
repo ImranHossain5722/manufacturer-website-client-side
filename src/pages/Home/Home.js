@@ -4,6 +4,7 @@ import OurCapability from '../../Components/HomeComponents/OurCapability';
 import TopBanner from '../../Components/HomeComponents/TopBanner';
 import OurStep from '../../Components/HomeComponents/OurStep'
 import BusinessSummery from '../../Components/HomeComponents/BusinessSummery';
+import Blogs from '../Blogs/Blogs';
 const Home = () => {
 
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <OurCapability></OurCapability>
             <BusinessSummery></BusinessSummery>
             <OurStep></OurStep>
+            <Blogs></Blogs>
         </div>
     );
 };
