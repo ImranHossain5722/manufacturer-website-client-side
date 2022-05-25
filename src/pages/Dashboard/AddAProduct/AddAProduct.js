@@ -41,7 +41,7 @@ const AddAProduct = () => {
                img:img
 
             }
-
+                // send server
             fetch('http://localhost:5000/manufacturerItems',{
               method: 'POST',
               headers:{

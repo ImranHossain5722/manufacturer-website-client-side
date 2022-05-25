@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "../../Shared/Loading/Loading";
+import OrderForm from '../OrderForm/OrderForm'
+
 
 const SingleItem = () => {
   const { id } = useParams();
@@ -13,9 +15,9 @@ const SingleItem = () => {
   }, [id]);
 
   return (
-    <div className=" flex mx-24">
+    <div className=" mx-24 min-h-screen">
 
-      <div class="card lg:card-side bg-base-100 shadow-xl">
+      <div class="card lg:card-side bg-base-100 shadow-xl p-32">
         <figure>
           <img className="w-96 "
             src={item.img}
@@ -26,7 +28,6 @@ const SingleItem = () => {
           <h2 class="card-title mt-12">Name: {item.name}</h2>
           <p>{item.description}</p>
           <p><span className="font-bold">Price:$ </span>{item.price}</p>
-          <p><span className="font-bold">Quantity:  </span>{item.quantity} <small>pieces</small> </p>
           <p><span className="font-bold">Available Quantity:  </span>{item.availableQuantity} <small>pieces</small> </p>
           <p><span className="font-bold">Minimum Order:  </span>{item.minimumOrder} <small>pieces</small> </p>
           <div class="card-actions justify-end">
@@ -34,6 +35,8 @@ const SingleItem = () => {
           </div>
         </div>
       </div>
+
+        <OrderForm item={item}></OrderForm>
     </div>
   );
 };

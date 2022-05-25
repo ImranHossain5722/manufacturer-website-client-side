@@ -14,7 +14,7 @@ const Reviews = () => {
 
   return (
     <div>
-      <h2 className="text-center text-4xl font-bold">Our Client Feedback </h2>
+      <h2 className="text-center text-4xl font-bold">What our Client's Says </h2>
       <div class="divider w-10 h-1 mx-auto bg-primary"></div> 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 p-12">
         {

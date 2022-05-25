@@ -15,8 +15,53 @@ const AddReview = () => {
       const { data:userFeedBack , isLoading } = useQuery("userFeedBack", () =>
         fetch("http://localhost:5000/reviews").then((res) => res.json())
       );
+      const ReviewImagesStorageKey = "a60adc861a41403d1c4df1acbdd1db7e";
+
       const onSubmit = async (data) => {
-        
+        const image = data.image[0];
+      const formData = new FormData();
+      formData.append('image', image)
+      const url = `https://api.imgbb.com/1/upload?key=${ReviewImagesStorageKey}`;
+      fetch( url,{
+          method:'POST',
+          body: formData,
+      })
+      .then((res)=>res.json())
+      .then((result) =>{
+         if(result.success){
+            const img = result.data.url
+            const reviews ={
+                name:data.name,
+                review:data.review,
+                 img:img
+            }
+
+            // send data base
+            fetch('http://localhost:5000/reviews',{
+                method:'POST',
+                headers:{
+                    'content-type':'application/json',
+                    authorization:`Bearer ${localStorage.getItem('accessToken')}`
+                },
+                body:JSON.stringify(reviews)
+            })
+            .then(res=> res.json())
+            .then(inserted=>{
+              if(inserted.insertedId){
+                toast.success('Your review successfully ')
+                reset()
+              }
+              else{
+                toast.error('Failed to add your review')
+              }
+                
+            })
+
+         }   
+
+
+
+      })
   
         };
 
