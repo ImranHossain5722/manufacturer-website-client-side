@@ -196,7 +196,7 @@ const AddAProduct = () => {
               </label>
               <input
                 type="file"
-                placeholder="Product Price"
+                placeholder="Product image"
                 className="input input-bordered w-full max-w-xs text-black"
                 {...register("image", {
                   required: {
@@ -217,7 +217,7 @@ const AddAProduct = () => {
             <input
               className="btn btn-outline w-full max-w-xs "
               type="submit"
-              value="Submit"
+              value="Add Product"
             />
           </form>
         </div>

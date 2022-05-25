@@ -22,7 +22,7 @@ import BlogDetails from '../src/pages/Blogs/BlogDetails';
 import RequireAdmin from './Shared/RequireAdmin.js/RequireAdmin';
 import AddAProduct from './pages/Dashboard/AddAProduct/AddAProduct';
 import ManageAllOrders from './pages/Dashboard/ManageAllOrders/ManageAllOrders'
-import ManageProducts from './pages/Dashboard/ManageProducts/ManageProducts';
+// import ManageProducts from './pages/Dashboard/ManageProducts/ManageProducts';
 import AllItems from './pages/AllItems/AllItems';
 
 
