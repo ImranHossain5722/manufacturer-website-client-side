@@ -13,3 +13,5 @@
 - Add a new product
 - Add your own feedback i mean review
 - you can do ADMIN access.
+* Admin can  delete Products
+* Admin can cancel order.

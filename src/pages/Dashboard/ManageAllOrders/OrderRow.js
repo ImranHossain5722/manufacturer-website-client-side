@@ -1,8 +1,8 @@
 import React from 'react';
 
-const OrderRow = ({order}) => {
+const OrderRow = ({order,handelDelete}) => {
 
-    const{userName, userEmail, quantity}= order
+    const{_id,userName, userEmail, quantity}= order
     return (
         
         <tr>
@@ -11,7 +11,8 @@ const OrderRow = ({order}) => {
         <td>{userEmail}</td>
         <td>{quantity}</td>
 
-        <td><button className="btn btn-xs">Cancel Order</button></td>
+        <td><button onClick={()=>handelDelete(_id)} className="btn btn-xs">Cancel Order</button></td>
+        
         
       </tr>  
 

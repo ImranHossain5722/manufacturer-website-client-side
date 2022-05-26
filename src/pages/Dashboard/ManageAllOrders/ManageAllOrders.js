@@ -5,7 +5,7 @@ import OrderRow from "./OrderRow";
 
 const ManageAllOrders = () => {
   const {
-    data: allOrder,
+    data: allOrder, setAllOrder,
     isLoading,
     refetch,
   } = useQuery("allOrder", () =>
@@ -16,6 +16,25 @@ const ManageAllOrders = () => {
       },
     }).then((res) => res.json())
   );
+    //for delete
+  const handelDelete = (id) => {
+    const proceed = window.confirm("Are you sure you want to delete order");
+    if (proceed) {
+
+      const url = `https://warm-journey-62382.herokuapp.com/orders/${id}`;
+      fetch(url, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const remaining = allOrder.filter(
+            (allIOrder) => allOrder._id !== id
+          );
+          setAllOrder(remaining);
+        });
+    }
+  };
+
 
   if (isLoading) {
     return <Loading />;
@@ -37,7 +56,7 @@ const ManageAllOrders = () => {
         </thead>
         <tbody>
           {allOrder.map((order) => (
-            <OrderRow key={order._id} order={order}></OrderRow>
+            <OrderRow key={order._id} order={order} handelDelete={handelDelete}></OrderRow>
           ))}
         </tbody>
       </table>

@@ -1,24 +1,26 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const AllItem = ({ allItem }) => {
+const AllItem = ({ allItem, allItems, handelDelete }) => {
   const {
     _id,
     name,
     price,
-
     description,
     img,
     minimumOrder,
     availableQuantity,
   } = allItem;
   const navigate =useNavigate()
-  const buyButton = _id => {
-    navigate(`ManufacturersItems/${_id}`)
+  const Button = ()=> {
+    navigate('/dashboard/AddAProducts')
   }
   return (
-    <div>
+
+      
+    <div>  
       <div class="card card-side bg-base-100 shadow-xl">
+        
         <figure>
           <img className="w-96 h-96" src={img} alt="product" />
         </figure>
@@ -42,7 +44,8 @@ const AllItem = ({ allItem }) => {
             {minimumOrder} <small>pieces</small>{" "}
           </p>
           <div class="card-actions justify-end">
-            <button onClick={()=>buyButton(_id)} class="btn btn-primary">Watch</button>
+            <button  onClick={()=>handelDelete(_id)} class="btn btn-primary">Delete Product</button>
+            <button onClick={Button} class="btn btn-primary">Add Product</button>
           </div>
         </div>
       </div>
