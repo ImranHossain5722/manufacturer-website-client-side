@@ -15,28 +15,32 @@ const SingleItem = () => {
   }, [id]);
 
   return (
-    <div className=" mx-24 min-h-screen">
-
-      <div class="card lg:card-side bg-base-100 shadow-xl p-32">
+    <div className=" flex  justify-center pb-10 gap-9 ">
+     <div className="flex items-center"> 
+      <div class="card lg:card-side bg-base-100 shadow-xl p-3">
         <figure>
-          <img className="w-96 "
+          <img className="w-44 "
             src={item.img}
             alt="Album"
           />
         </figure>
         <div class="card-body">
           <h2 class="card-title mt-12">Name: {item.name}</h2>
-          <p>{item.description}</p>
+          
           <p><span className="font-bold">Price:$ </span>{item.price}</p>
           <p><span className="font-bold">Available Quantity:  </span>{item.availableQuantity} <small>pieces</small> </p>
           <p><span className="font-bold">Minimum Order:  </span>{item.minimumOrder} <small>pieces</small> </p>
-          <div class="card-actions justify-end">
-          <button class="btn btn-primary">check Out</button>
+          <div class="card-actions justify-start">
+          <button class="btn btn-primary">Payment</button>
+          
           </div>
+          
         </div>
+        
+      </div>
       </div>
 
-        <OrderForm item={item}></OrderForm>
+      <div ><OrderForm item={item}></OrderForm></div>
     </div>
   );
 };
