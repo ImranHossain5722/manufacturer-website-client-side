@@ -5,7 +5,7 @@ const BlogDetails = () => {
   const [singleBlog, setSingleBlog] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blogs/${id}`)
+    fetch(`https://warm-journey-62382.herokuapp.com/blogs/${id}`)
       .then((res) => res.json())
       .then((data) => setSingleBlog(data));
   }, [id]);
@@ -22,7 +22,6 @@ const BlogDetails = () => {
         <div class="card-body items-center text-center px-80">
           <h2 class="card-title">{singleBlog.title}</h2>
           <p className=" text-justify">{singleBlog.blog}</p>
-          
         </div>
       </div>
     </div>

@@ -11,10 +11,8 @@ const MyPortfolio = () => {
               <span className="text-primary">Name:</span> Imrran Hossain
             </h1>
             <p class="text-justify">
-              <span className="text-4xl font-bold text-primary">
-                About me:
-              </span>
-              I live in Dhaka. I finish my bachelor's degree at a national
+              <span className="text-2xl font-bold text-primary">
+                About me:</span> I live in Dhaka. I finish my bachelor's degree at a national
               college. During this time I also completed some programming
               courses. last two half years I do freelance work as a WordPress
               developer in the Fiverr marketplace. I already completed 90+
@@ -24,15 +22,18 @@ const MyPortfolio = () => {
               wanna become a senior full-stack web developer. I hope to start my
               own company one day.
             </p>
-            <p class=" mt-6 text-justify">
+            <p class=" mt-6 ">
               <span className="text-xl font-bold text-primary">
               Links to my development website: </span>
 
               <a href='https://carsale-a3464.web.app'>
-              <button   class="btn btn-sm btn-primary">Use React </button>
+              <button   class="btn btn-sm btn-primary mx-2">Use React </button>
               </a>
 
               <a href='https://techntag.com/'>
+              <button class="btn btn-sm mx-2 btn-primary">Use wordpress </button>
+              </a>
+              <a href='https://americaninsuranceshield.com/'>
               <button class="btn btn-sm btn-primary">Use wordpress </button>
               </a>
               
