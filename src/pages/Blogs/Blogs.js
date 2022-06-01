@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Blog from "../../Components/BlogsComponents/Blog";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Blogs = () => {
   const [blogs, setBlogs] = useState([]);
@@ -11,6 +12,7 @@ const Blogs = () => {
   }, []);
   return (
     <div>
+      <PageTitle title="Blogs"></PageTitle>
       <h1 className="text-4xl text-center font-bold mt-11"> Our Blogs </h1>
       <div class="divider w-10 h-1 mx-auto bg-primary"></div>
 

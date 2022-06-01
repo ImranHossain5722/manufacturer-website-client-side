@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 const BlogDetails = () => {
   const { id } = useParams();
   const [singleBlog, setSingleBlog] = useState({});
@@ -11,6 +12,7 @@ const BlogDetails = () => {
   }, [id]);
   return (
     <div>
+      <PageTitle title="Blogs Details"></PageTitle>
       <div class="card w-full h-full bg-base-100 shadow-xl">
         <figure class="px-10 pt-10">
           <img

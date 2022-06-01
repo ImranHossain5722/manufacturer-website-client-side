@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import UserRow from "../../../Components/UserRow/UserRow";
 import Loading from "../../../Shared/Loading/Loading";
+import PageTitle from "../../../Shared/PageTitle/PageTitle";
 
 const AllUser = () => {
   const {
@@ -22,6 +23,7 @@ const AllUser = () => {
 
   return (
     <div>
+      <PageTitle title="All User"></PageTitle>
       <h2>All users:{users.length}</h2>
 
       <div class="overflow-x-auto">

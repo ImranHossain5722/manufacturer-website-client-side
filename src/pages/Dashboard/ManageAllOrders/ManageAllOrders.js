@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "react-query";
 import Loading from "../../../Shared/Loading/Loading";
+import PageTitle from "../../../Shared/PageTitle/PageTitle";
 import OrderRow from "./OrderRow";
 
 const ManageAllOrders = () => {
@@ -42,6 +43,7 @@ const ManageAllOrders = () => {
 
   return (
     <div>
+      <PageTitle title="All Orders"></PageTitle>
       <h2 className="text-2xl">ALl Order: {allOrder.length}</h2>
 
       <table class="table w-full">

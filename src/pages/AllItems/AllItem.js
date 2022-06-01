@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const AllItem = ({ allItem, allItems, handelDelete }) => {
   const {
@@ -18,7 +19,8 @@ const AllItem = ({ allItem, allItems, handelDelete }) => {
   return (
 
       
-    <div>  
+    <div>
+      <PageTitle title=" Mange All Products "></PageTitle>  
       <div class="card card-side bg-base-100 shadow-xl">
         
         <figure>

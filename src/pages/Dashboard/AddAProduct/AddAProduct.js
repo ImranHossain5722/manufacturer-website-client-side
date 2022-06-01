@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useQuery } from "react-query";
 import { toast } from "react-toastify";
 import Loading from "../../../Shared/Loading/Loading";
+import PageTitle from "../../../Shared/PageTitle/PageTitle";
 const AddAProduct = () => {
   const {
     register,
@@ -66,6 +67,7 @@ const AddAProduct = () => {
 
   return (
     <div className="grid justify-items-center mb-3">
+      <PageTitle title="Add Products"></PageTitle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full max-w-xs">
           {/* for Name field */}

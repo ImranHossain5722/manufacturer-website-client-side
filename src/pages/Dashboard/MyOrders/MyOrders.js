@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../firebase.init";
+import PageTitle from "../../../Shared/PageTitle/PageTitle";
 
 const MyOrders = () => {
   const [user] = useAuthState(auth);
@@ -23,6 +24,7 @@ const MyOrders = () => {
   }, [user]);
   return (
     <div>
+      <PageTitle title="My Orders"></PageTitle>
       My Orders {myOrder.length}
       <table class="table w-full">
         {/* <!-- head --> */}

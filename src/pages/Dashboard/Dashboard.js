@@ -3,13 +3,15 @@ import { Link, Outlet } from "react-router-dom";
 import useAdmin from "../../Hooks/useAdmin";
 import auth from "../../firebase.init";
 import { useAuthState } from "react-firebase-hooks/auth";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 
 const Dashboard = () => {
   const [user] =useAuthState(auth)
   const [admin] = useAdmin(user)
   return (
-    <div>
+    <div className="">
+      <PageTitle title="Dashboard"></PageTitle>
         <div class="drawer drawer-mobile ">
         <input id="my-DashboardDrawer" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content ">
@@ -19,9 +21,9 @@ const Dashboard = () => {
           </h2>
           <Outlet />
         </div>
-        <div class="drawer-side">
+        <div class="drawer-side drop-shadow-xl my-5 py-6  justify-center items-center">
           <label for="my-DashboardDrawer" class="drawer-overlay"></label>
-          <ul class="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
+          <ul class="menu p-4 overflow-y-auto w-60 bg-base-200 text-base-content">
             <li>
               <Link to="/dashboard">My Profile</Link>
             </li>

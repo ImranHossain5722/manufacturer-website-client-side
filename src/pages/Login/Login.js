@@ -10,6 +10,7 @@ import {
 import { useForm } from "react-hook-form";
 import Loading from "../../Shared/Loading/Loading";
 import useToken from "../../Hooks/UserToken";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 
 const Login = () => {
 
@@ -60,6 +61,7 @@ const Login = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
+      <PageTitle title="Login"></PageTitle>
       <div class="hero-overlay bg-opacity-90"></div>
       <div class="hero-content text-center text-neutral-content">
         <div class="max-w-full">

@@ -1,8 +1,10 @@
 import React from "react";
 import imran from "../../Assets/images/imran.png";
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 const MyPortfolio = () => {
   return (
     <div>
+      <PageTitle title='My portfolio'></PageTitle>
       <div class="hero min-h-screen bg-base-200">
         <div class="hero-content flex-col lg:flex-row">
           <img src={imran} class="max-w-sm rounded-xl shadow-2xl" />

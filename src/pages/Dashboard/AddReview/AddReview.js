@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useQuery } from "react-query";
 import { toast } from "react-toastify";
 import Loading from "../../../Shared/Loading/Loading";
+import PageTitle from "../../../Shared/PageTitle/PageTitle";
 
 const AddReview = () => {
   const {
@@ -62,6 +63,7 @@ const AddReview = () => {
 
   return (
     <div className="grid justify-items-center mb-3">
+      <PageTitle title="Add Review"></PageTitle>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full max-w-xs">
           {/* for Name field */}

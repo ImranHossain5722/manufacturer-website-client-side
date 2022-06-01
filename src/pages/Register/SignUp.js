@@ -12,6 +12,7 @@ import Loading from '../../Shared/Loading/Loading';
 import auth from '../../firebase.init';
 import {toast } from 'react-toastify';
 import useToken from '../../Hooks/UserToken';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const SignUp = () => {
     const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -64,6 +65,7 @@ const SignUp = () => {
         backgroundPosition:'center',
         backgroundRepeat:'no-repeat',
       }} >
+        <PageTitle title="Signup"></PageTitle>
       <div class="hero-overlay bg-opacity-40"></div>
       <div class="hero-content text-left text-neutral-content">
         <div class="max-w-full">

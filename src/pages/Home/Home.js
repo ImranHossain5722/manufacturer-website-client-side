@@ -6,10 +6,12 @@ import OurStep from '../../Components/HomeComponents/OurStep'
 import BusinessSummery from '../../Components/HomeComponents/BusinessSummery';
 import Blogs from '../Blogs/Blogs';
 import Reviews from '../../Components/ReviewComponents/Reviews';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 const Home = () => {
 
     return (
         <div className=''>
+            <PageTitle title="Home"></PageTitle>
             <TopBanner></TopBanner>
             <ManufacturersItems></ManufacturersItems>
             <OurCapability></OurCapability>
