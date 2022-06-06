@@ -4,14 +4,15 @@
 
 # MY_Website_server_link: https://warm-journey-62382.herokuapp.com/
 
-# what you do this website .
-
-- Create user
-- Login anf sign up
-- Login with google
-- Order a product
-- Add a new product
-- Add your own feedback i mean review
-- you can do ADMIN access.
-* Admin can  delete Products
-* Admin can cancel order.
+# what we do this website .
+ - Features:
+* This is a full stack web development project that uses
+MongoDB as the back end database, and we can also protect
+all API links using JWT.
+* Users can create accounts using their email address and
+password.We will be using Firebase - Authentication for users
+to login as well as using Google Accounts.
+* Customers can order products and add their own reviews.
+* Admin can manage all orders, upload products, and cancel
+orders.
+# Technology: React,HTMl,CSS,Tailwind,Daisyui,JavaScript, React hook form, React-Toastify, Firebase, React-Query, React-firebase hook, Node.js, MongoDB,Jwt.
