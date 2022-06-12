@@ -32,12 +32,11 @@ const MyPortfolio = () => {
               <button   class="btn btn-sm btn-primary mx-2">Use React </button>
               </a>
 
-              <a href='https://techntag.com/'>
-              <button class="btn btn-sm mx-2 btn-primary">Use wordpress </button>
+              <a href='https://imran-portfolio-86d8a.web.app/'>
+              <button   class="btn btn-sm btn-primary mx-2">My portfolio website </button>
               </a>
-              <a href='https://americaninsuranceshield.com/'>
-              <button class="btn btn-sm btn-primary">Use wordpress </button>
-              </a>
+
+              
               
               </p>
           </div>
