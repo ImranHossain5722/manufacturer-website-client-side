@@ -53,11 +53,7 @@ const NavBar = ({ children }) => {
                     Home
                   </NavLink>
                 </li>
-                <li>
-                  <NavLink to="/portfolio" className="rounded-lg">
-                    My Portfolio
-                  </NavLink>
-                </li>
+               
               
 
                 <li>
@@ -142,11 +138,7 @@ const NavBar = ({ children }) => {
                 Home
               </NavLink>
             </li>
-            <li>
-              <NavLink to="/portfolio" className="rounded-lg">
-                My Portfolio
-              </NavLink>
-            </li>
+          
             <li>
               <NavLink to="/dashboard" className="rounded-lg">
                 Dashboard
